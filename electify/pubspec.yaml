@@ -1,5 +1,7 @@
-name: electify
-description: A new Flutter project.
+name: myapp
+description: A exported flutter project from FUNCTION12
+
+
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -19,7 +21,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.19.4 <4.0.0'
+  sdk: '>=2.18.2 <3.0.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -32,12 +34,10 @@ dependencies:
     sdk: flutter
 
 
-  english_words: ^4.0.0
-  provider: ^6.0.0
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  google_fonts: ^3.0.1
 
 dev_dependencies:
   flutter_test:
@@ -65,6 +65,113 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/app-demo/images/votingicon.png
+    - assets/app-demo/images/selectcircle.png
+    - assets/app-demo/images/profileicon.png
+    - assets/app-demo/images/profileicon-Eay.png
+    - assets/app-demo/images/feedicon.png
+    - assets/app-demo/images/feedicon-Fb3.png
+    - assets/app-demo/images/votingicon-ATX.png
+    - assets/assets/images/feedicon-pF7.png
+    - assets/assets/images/pencil-1.png
+    - assets/app-demo/images/selectcircle-tnZ.png
+    - assets/app-demo/images/selectcircle-rRs.png
+    - assets/app-demo/images/backarrow.png
+    - assets/assets/images/votingicon-kJ1.png
+    - assets/app-demo/images/demoicon.png
+    - assets/assets/images/greenicon.png
+    - assets/app-demo/images/redirecticon.png
+    - assets/app-demo/images/redirecticon-QHb.png
+    - assets/app-demo/images/redirecticon-gr1.png
+    - assets/app-demo/images/redirecticon-VwT.png
+    - assets/app-demo/images/top.png
+    - assets/app-demo/images/votingicon-fCH.png
+    - assets/app-demo/images/polcompassimg-1.png
+    - assets/assets/images/votingicon-56u.png
+    - assets/assets/images/redirecticon-n1K.png
+    - assets/app-demo/images/downarrow.png
+    - assets/assets/images/republicanicon.png
+    - assets/app-demo/images/redirecticon-yg1.png
+    - assets/app-demo/images/redirecticon-8rH.png
+    - assets/app-demo/images/feedicon-fTT.png
+    - assets/app-demo/images/pfp1.png
+    - assets/app-demo/images/pencil-1-7tR.png
+    - assets/assets/images/teaicon.png
+    - assets/app-demo/images/gradientblue-bg.png
+    - assets/app-demo/images/redirecticon-9jj.png
+    - assets/app-demo/images/pencil-1-Lu3.png
+    - assets/app-demo/images/gradientblue-bg-uP3.png
+    - assets/app-demo/images/polcompassimg-1-bWm.png
+    - assets/app-demo/images/gradientblue-bg-qtH.png
+    - assets/assets/images/gradientblue-bg-ALD.png
+    - assets/app-demo/images/profileicon-5Yy.png
+    - assets/app-demo/images/profileicon-ahB.png
+    - assets/app-demo/images/downarrow-tC5.png
+    - assets/app-demo/images/redirecticon-GTX.png
+    - assets/assets/images/feedicon-ZSd.png
+    - assets/assets/images/profileicon-RyP.png
+    - assets/app-demo/images/gradientred.png
+    - assets/assets/images/redirecticon-JH3.png
+    - assets/assets/images/redirecticon-sJm.png
+    - assets/assets/images/redirecticon-wC9.png
+    - assets/assets/images/polcompassimg-1-r4D.png
+    - assets/app-demo/images/feedicon-QJ1.png
+    - assets/assets/images/redirecticon-KQy.png
+    - assets/app-demo/images/top-fBK.png
+    - assets/assets/images/downarrow-Smj.png
+    - assets/assets/images/redirecticon-mp1.png
+    - assets/app-demo/images/polcompassimg-1-7cy.png
+    - assets/assets/images/pfp1-sSM.png
+    - assets/assets/images/pfp3.png
+    - assets/app-demo/images/gradientred-26Z.png
+    - assets/assets/images/profileicon-JRs.png
+    - assets/assets/images/profileicon-RFb.png
+    - assets/app-demo/images/gradientred-V33.png
+    - assets/assets/images/downarrow-pXf.png
+    - assets/assets/images/check.png
+    - assets/app-demo/images/downarrow-atm.png
+    - assets/assets/images/feedicon-tkM.png
+    - assets/app-demo/images/gradientred-MZF.png
+    - assets/assets/images/gradientred-UWh.png
+    - assets/app-demo/images/logosolo-1.png
+    - assets/app-demo/images/backarrow-pRK.png
+    - assets/app-demo/images/downarrow-8gu.png
+    - assets/app-demo/images/logosolo-1-CcD.png
+    - assets/app-demo/images/gradientblue-bg-mw3.png
+    - assets/app-demo/images/gradientred-XHw.png
+    - assets/app-demo/images/selectcircle-1U1.png
+    - assets/app-demo/images/downarrow-oXb.png
+    - assets/app-demo/images/backarrow-yHF.png
+    - assets/app-demo/images/backarrow-E1T.png
+    - assets/assets/images/downarrow-oPB.png
+    - assets/app-demo/images/downarrow-HV7.png
+    - assets/app-demo/images/downarrow-i4d.png
+    - assets/assets/images/selectcircle-xDB.png
+    - assets/assets/images/selectcircle-Bvu.png
+    - assets/assets/images/votingicon-xg5.png
+    - assets/assets/images/placeholdernewsimg-1.png
+    - assets/app-demo/images/downarrow-UJ9.png
+    - assets/assets/images/pfp2.png
+    - assets/app-demo/images/placeholdernewsimg-1-d6u.png
+    - assets/assets/images/selectcircle-Nn9.png
+    - assets/app-demo/images/backarrow-BDo.png
+    - assets/app-demo/images/top-zRK.png
+    - assets/app-demo/images/placeholdernewsimg-1-oeD.png
+    - assets/app-demo/images/downarrow-wdw.png
+    - assets/app-demo/images/logowtext-1.png
+    - assets/assets/images/gradientblue-bg-Mqo.png
+    - assets/assets/images/gradientred-MfK.png
+    - assets/app-demo/images/backarrow-gmb.png
+    - assets/app-demo/images/downarrow-CgV.png
+    - assets/assets/images/placeholdernewsimg-1-e1s.png
+    - assets/app-demo/images/gradientred-ZZX.png
+    - assets/app-demo/images/votingicon-wss.png
+    - assets/app-demo/images/placeholdernewsimg-1-Z8q.png
+    - assets/assets/images/placeholdernewsimg-1-xtM.png
+    - assets/app-demo/images/placeholdernewsimg-1-j17.png
+    - assets/assets/images/gradientblue-bg-vQM.png
+    - assets/assets/images/demoicon-Z2d.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
