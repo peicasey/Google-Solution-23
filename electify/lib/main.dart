@@ -2,6 +2,8 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'color_schemes.g.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -14,12 +16,21 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => MyAppState(),
       child: MaterialApp(
-        title: 'Namer App',
+        title: 'Electify',
         theme: ThemeData(
-          useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(
-              seedColor: Color.fromARGB(255, 178, 131, 255)),
-        ),
+            useMaterial3: true,
+            fontFamily: 'Inter',
+            colorScheme: lightColorScheme),
+        darkTheme: ThemeData(
+            useMaterial3: true,
+            fontFamily: 'Inter',
+            colorScheme: darkColorScheme),
+        themeMode: ThemeMode.dark,
+        /* ThemeMode.system to follow system theme, 
+          ThemeMode.light for light theme, 
+          ThemeMode.dark for dark theme
+        */
+        debugShowCheckedModeBanner: false,
         home: MyHomePage(),
       ),
     );
@@ -101,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     })),
             Expanded(
               child: Container(
-                color: Theme.of(context).colorScheme.primaryContainer,
+                color: Theme.of(context).colorScheme.secondaryContainer,
                 child: page,
               ),
             ),
@@ -134,7 +145,7 @@ class FavoritesPage extends StatelessWidget {
               'You have ${appState.favorites.length} favorites words:',
               style: TextStyle(
                   fontSize: 20.0,
-                  color: Theme.of(context).colorScheme.primary,
+                  color: Theme.of(context).colorScheme.tertiary,
                   fontWeight: FontWeight.bold),
             ),
           ),
@@ -170,7 +181,7 @@ class GeneratorPage extends StatelessWidget {
           'a random idea:',
           style: TextStyle(
               fontSize: 20.0,
-              color: Theme.of(context).colorScheme.secondary,
+              color: Theme.of(context).colorScheme.tertiary,
               fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 10),
@@ -185,14 +196,14 @@ class GeneratorPage extends StatelessWidget {
                 appState.toggleFavorite();
               },
               icon: Icon(icon),
-              label: Text('Like'),
+              label: Text('LIKE'),
             ),
             ElevatedButton(
               onPressed: () {
                 print('button pressed!');
                 appState.getNext();
               },
-              child: Text('Next'),
+              child: Text('NEXT'),
             ),
           ],
         ),
