@@ -2,7 +2,13 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'color_schemes.g.dart';
+import 'color_schemes.dart';
+import 'feed.dart';
+import 'onboard.dart';
+import 'login.dart';
+import 'profile.dart';
+import 'voting.dart';
+import 'nav_bar.dart';
 
 void main() {
   runApp(MyApp());
@@ -78,10 +84,22 @@ class _MyHomePageState extends State<MyHomePage> {
     Widget page;
     switch (selectedIndex) {
       case 0:
-        page = GeneratorPage();
+        page = OnboardPage();
         break;
       case 1:
-        page = FavoritesPage();
+        page = LoginPage();
+        break;
+      case 2:
+        page = ProfilePage();
+        break;
+      case 3:
+        page = FeedPage();
+        break;
+      case 4:
+        page = Voting1Page();
+        break;
+      case 5:
+        page = Voting2Page();
         break;
       default:
         throw UnimplementedError('no widget for $selectedIndex');
@@ -118,127 +136,12 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
+        bottomNavigationBar: DemoBottomAppBar(
+            // fabLocation: FloatingActionButtonLocation.endDocked,
+            // shape: null,
+            ),
       );
     });
   }
 }
 
-class FavoritesPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    var appState = context.watch<MyAppState>();
-    var pair = appState.current;
-
-    if (appState.favorites.isEmpty) {
-      return Center(
-        child: Text('No favorites yet.'),
-      );
-    }
-
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(20),
-            child: Text(
-              'You have ${appState.favorites.length} favorites words:',
-              style: TextStyle(
-                  fontSize: 20.0,
-                  color: Theme.of(context).colorScheme.tertiary,
-                  fontWeight: FontWeight.bold),
-            ),
-          ),
-          for (var pair in appState.favorites)
-            ListTile(
-              leading: Icon(Icons.favorite),
-              title: Text(pair.asLowerCase),
-            ),
-        ],
-      ),
-    );
-  }
-}
-
-class GeneratorPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    var appState = context.watch<MyAppState>();
-    var pair = appState.current;
-
-    IconData icon;
-    if (appState.favorites.contains(pair)) {
-      icon = Icons.favorite;
-    } else {
-      icon = Icons.favorite_border;
-    }
-
-    return Center(
-        child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          'a random idea:',
-          style: TextStyle(
-              fontSize: 20.0,
-              color: Theme.of(context).colorScheme.tertiary,
-              fontWeight: FontWeight.bold),
-        ),
-        SizedBox(height: 10),
-        BigCard(pair: pair),
-        SizedBox(height: 10),
-        Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ElevatedButton.icon(
-              onPressed: () {
-                print('like button pressed!');
-                appState.toggleFavorite();
-              },
-              icon: Icon(icon),
-              label: Text('LIKE'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                print('button pressed!');
-                appState.getNext();
-              },
-              child: Text('NEXT'),
-            ),
-          ],
-        ),
-      ],
-    ));
-  }
-}
-
-class BigCard extends StatelessWidget {
-  const BigCard({
-    super.key,
-    required this.pair,
-  });
-
-  final WordPair pair;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final style = theme.textTheme.displayMedium!.copyWith(
-      fontWeight: FontWeight.bold,
-      color: theme.colorScheme.onPrimary,
-    );
-
-    return Card(
-      color: theme.colorScheme.primary,
-      elevation: 5,
-      child: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Text(
-          pair.asLowerCase,
-          style: style,
-          semanticsLabel: "${pair.first} ${pair.second}",
-        ),
-      ),
-    );
-  }
-}
