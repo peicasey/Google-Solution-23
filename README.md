@@ -2,4 +2,4 @@
 
 Electify, a voter and election information hub for the next generation.
 
-By: Casey Pei, Lily Tang, Ryan Kabir, Tiffany Pei
+By: Casey Pei, Ryan Kabir, Tiffany Pei, Yushan (Lily) Tang
