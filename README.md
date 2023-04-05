@@ -4,7 +4,7 @@
 
 Electify, a voter and election information hub for the next generation.
 
-Demonstration: https://www.youtube.com/watch?v=Dq5mzhSnesQ/default.jpg
+Demonstration: https://www.youtube.com/watch?v=Dq5mzhSnesQ/
 
 By: Casey Pei, Ryan Kabir, Tiffany Pei, Yushan (Lily) Tang
 
