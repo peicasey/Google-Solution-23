@@ -1,3 +1,5 @@
 # Google-Solution-23
 
-DUE APRIL 4 10:59 PM
+Electify, a voter and election information hub for the next generation.
+
+By: Casey Pei, Lily Tang, Ryan Kabir, Tiffany Pei
