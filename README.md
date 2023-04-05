@@ -4,8 +4,10 @@ Electify, a voter and election information hub for the next generation.
 
 By: Casey Pei, Ryan Kabir, Tiffany Pei, Yushan (Lily) Tang
 
+Login:
 ![image](https://user-images.githubusercontent.com/73092944/229997775-d864b1f3-5a9c-4cfc-a5e7-77e9e0857bdb.png)
 
+Voter Peronal Profile:
 ![image](https://user-images.githubusercontent.com/73092944/229997482-4b52b41b-3701-4ecb-8fa3-050ce183b186.png)
 
 ![image](https://user-images.githubusercontent.com/73092944/229997693-41c4b1bd-1407-4bae-9851-f59b2c58a67a.png)
